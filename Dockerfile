@@ -25,6 +25,7 @@ COPY ./client.c ./
 COPY ./server.c ./
 
 RUN gcc -o client client.c && \
-    gcc -o server server.c
-
-CMD [ "echo", "Client-Server is built."]
+    gcc -o server server.c && \
+    echo "Client-Server is built."
+    
+CMD [ "bash"]
