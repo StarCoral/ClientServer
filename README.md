@@ -33,12 +33,13 @@
    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./server 51717`
 + client：
-    + 執行container：
+   + 執行container：
 	
 	
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker run -it -p 51717:51717 -h client --name client  riyazhu/unp:latest`
-    + 運行client：
+   
+   + 運行client：
 	
 	
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./server $serverIP 51717`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./client $serverIP 51717`
 
