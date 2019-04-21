@@ -21,11 +21,11 @@ RUN mv ./unpv13e ./src  && \
     cd ~
 
 #client-server
-COPY ./client.c ./
-COPY ./server.c ./
+ADD ./client.c ./
+ADD ./server.c ./
 
 RUN gcc -o client client.c && \
-    gcc -o server server.c && \
-    echo "Client-Server is built."
+    gcc -o server server.c 
     
-CMD [ "bash"]
+    
+CMD ["bash"]

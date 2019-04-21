@@ -30,12 +30,18 @@ spec:
       - name: server
         imagePullPolicy: IfNotPresent
         image: riyazhu/unp:latest
-        command:
+        ports:
+        - containerPort: 51717
+        command: ["bash"]
         
       - name: client01
-        image: riyazhu/unp:latest 
-        command:   
+        image: riyazhu/unp:latest
+        ports:
+        - containerPort: 51717        
+        command: ["bash"]  
         
       - name: client02
-        image: riyazhu/unp:latest 
-        command:
+        image: riyazhu/unp:latest
+        ports:
+        - containerPort: 51717        
+        command: ["bash"]
