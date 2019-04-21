@@ -27,18 +27,18 @@
    + 執行container：
    
    
-     `docker run -it -p 51717:51717 -h server --name server  riyazhu/unp:latest`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker run -it -p 51717:51717 -h server --name server  riyazhu/unp:latest`
    + 運行server：
    
    
-     `./server 51717`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./server 51717`
 + client：
     + 執行container：
 	
 	
-     `docker run -it -p 51717:51717 -h client --name client  riyazhu/unp:latest`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker run -it -p 51717:51717 -h client --name client  riyazhu/unp:latest`
     + 運行client：
 	
 	
-    `./server $serverIP 51717`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./server $serverIP 51717`
 
