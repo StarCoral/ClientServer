@@ -21,7 +21,7 @@
 + server：
    + 執行container：
    
-     `docker run -it -p 51717:51717 -h server --name server  riyazhu/unp:latest`
+     `docker run -it -p 51717:51717 -h server --name server  riyazhu/unp:ClientServer`
 
    + 運行server：
    
@@ -30,7 +30,7 @@
 + client：
    + 執行container：
     
-     `docker run -it -p 51717:51717 -h client --name client  riyazhu/unp:latest`
+     `docker run -it -p 51717:51717 -h client --name client  riyazhu/unp:ClientServer`
 
    + 運行client：
     
