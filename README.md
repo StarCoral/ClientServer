@@ -5,20 +5,15 @@
 
 1.&nbsp;&nbsp;建立一個新的資料夾：
 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`mkdir ClientServer`
 
 2.&nbsp;&nbsp;準備需使用的檔案：
 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`vim client.c`
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`vim server.c`
 
-
 3.&nbsp;&nbsp;建立image：
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker build -t riyazhu/unp:ClientServer . --no-cache`
 
@@ -26,20 +21,18 @@
 + server：
    + 執行container：
    
-   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker run -it -p 51717:51717 -h server --name server  riyazhu/unp:latest`
+     `docker run -it -p 51717:51717 -h server --name server  riyazhu/unp:latest`
+
    + 運行server：
    
-   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./server 51717`
+     `./server 51717`
+
 + client：
    + 執行container：
-	
-	
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`docker run -it -p 51717:51717 -h client --name client  riyazhu/unp:latest`
-   
+    
+     `docker run -it -p 51717:51717 -h client --name client  riyazhu/unp:latest`
+
    + 運行client：
-	
-	
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`./client $serverIP 51717`
+    
+     `./client $serverIP 51717`
 
