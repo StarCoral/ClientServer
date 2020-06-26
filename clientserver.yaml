@@ -29,19 +29,29 @@ spec:
       containers:
       - name: server
         imagePullPolicy: IfNotPresent
-        image: riyazhu/unp:latest
+        image: riyazhu/unp:ClientServer
         ports:
         - containerPort: 51717
         command: ["bash"]
-        
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: client-server
+  name: client-server
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: client-server
+      name: client-server
+    spec:  
+      containers:      
       - name: client01
-        image: riyazhu/unp:latest
+        image: riyazhu/unp:ClientServer
         ports:
         - containerPort: 51717        
         command: ["bash"]  
-        
-      - name: client02
-        image: riyazhu/unp:latest
-        ports:
-        - containerPort: 51717        
-        command: ["bash"]
